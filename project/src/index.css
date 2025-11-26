@@ -9,6 +9,33 @@ html, body {
 }
 
 /* --------------------------------------------------
+   💳 RAZORPAY MODAL FIX (Ensure popup appears on top)
+-------------------------------------------------- */
+
+.razorpay-container {
+  z-index: 99999999 !important;
+  position: fixed !important;
+}
+
+iframe[name^="razorpay"] {
+  z-index: 99999999 !important;
+  position: fixed !important;
+}
+
+div[id^="razorpay-container"] {
+  z-index: 99999999 !important;
+  position: fixed !important;
+}
+
+/* Force Razorpay backdrop to show */
+.razorpay-backdrop {
+  z-index: 99999998 !important;
+  position: fixed !important;
+  display: block !important;
+  opacity: 1 !important;
+}
+
+/* --------------------------------------------------
    📱 GLOBAL MEDIA QUERIES (Added as requested)
 -------------------------------------------------- */
 

@@ -1,11 +1,15 @@
 // App.tsx
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { AuthProvider } from './contexts/AuthContext';
+import { initAnalyticsConfig } from './config/analytics.config';
+import { initRazorpayConfig } from './config/razorpay.config';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import GoBackButton from './components/GoBackButton';
+import AnalyticsTracker from './components/AnalyticsTracker';
 import Home from './pages/Home';
 
 import About from './pages/About';
@@ -32,9 +36,30 @@ import OrderDetailPage from './pages/OrderDetailPage';
 //import ChatbotWidget from './components/ChatbotWidget';
 
 function App() {
+  // Initialize configurations from backend (AWS Secrets Manager) on app load
+  useEffect(() => {
+    const initConfigs = async () => {
+      try {
+        // Load analytics config (Google Analytics, Facebook Pixel) from AWS SSM
+        await initAnalyticsConfig();
+        
+        // Load Razorpay config from AWS Secrets Manager
+        await initRazorpayConfig();
+        
+        console.log('✅ All configurations initialized successfully');
+      } catch (error) {
+        console.error('❌ Error initializing configurations:', error);
+      }
+    };
+    
+    initConfigs();
+  }, []);
+
   return (
-    <AuthProvider>
-      <LocationProvider>
+    <HelmetProvider>
+      <AuthProvider>
+        <LocationProvider>
+          <AnalyticsTracker />
         <div className="min-h-screen bg-orange-50 text-gray-900">
           <Navbar />
           <main className="pt-20">
@@ -87,8 +112,9 @@ function App() {
         {/* <ChatbotWidget /> */}
           
         </div>
-      </LocationProvider>
-    </AuthProvider>
+        </LocationProvider>
+      </AuthProvider>
+    </HelmetProvider>
   );
 }
 
