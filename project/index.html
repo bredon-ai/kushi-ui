@@ -73,9 +73,6 @@
       fbq('init', 'YOUR_PIXEL_ID');
       fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
-    /></noscript>
     
     <!-- Google Tag Manager (Optional) - Replace GTM-XXXXXXX with your actual GTM ID -->
     <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -122,6 +119,11 @@
     </script>
   </head>
   <body>
+    <!-- Facebook Pixel Noscript (must be in body, not head) -->
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    
     <!-- React App Mounts Here -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
