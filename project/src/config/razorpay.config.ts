@@ -1,10 +1,13 @@
 // Razorpay Configuration
-// Replace these with actual credentials from Razorpay Dashboard
+// ⚠️ SECURITY: Only include PUBLIC key (KEY_ID) in frontend
+// Secret key (KEY_SECRET) should NEVER be in frontend code
 
 export const RAZORPAY_CONFIG = {
-  // Test Mode Keys (replace with your test keys)
+  // ✅ PUBLIC Key - Safe to expose in frontend
   KEY_ID: import.meta.env.VITE_RAZORPAY_KEY_ID || 'rzp_test_XXXXXXXXXXXX',
-  KEY_SECRET: import.meta.env.VITE_RAZORPAY_KEY_SECRET || 'your_secret_key_here',
+  
+  // ❌ DO NOT include KEY_SECRET here - it belongs in backend only!
+  // Backend handles: razorpay.key.secret=${RAZORPAY_KEY_SECRET}
   
   // Business Details
   MERCHANT_NAME: 'Kushi Hygiene Services',

@@ -13,6 +13,15 @@ import {
 import { useAuth } from '../contexts/AuthContext';
 import Global_API_BASE from '../services/GlobalConstants';
 import { initiateRazorpayPayment } from '../services/razorpayService';
+import { 
+  trackPaymentSuccess, 
+  trackPaymentFailure, 
+  trackBookingCompleted 
+} from '../utils/analytics';
+import { 
+  fbTrackPurchase, 
+  fbTrackInitiateCheckout 
+} from '../utils/fbPixel';
 
 interface PaymentMethod {
   id: string;
@@ -79,6 +88,9 @@ const Payment: React.FC = () => {
     setIsProcessing(true);
     setPaymentError('');
 
+    // Track checkout initiation
+    fbTrackInitiateCheckout(Number(totalAmount) || 0);
+
     try {
       if (selectedMethod === 'razorpay') {
         // Razorpay Payment Flow
@@ -92,6 +104,10 @@ const Payment: React.FC = () => {
           // Success Callback
           onSuccess: async (response) => {
             console.log('Payment Success:', response);
+            
+            // Track payment success
+            trackPaymentSuccess(response?.razorpay_payment_id || 'cash', Number(totalAmount) || 0);
+            
             setIsProcessing(true); // Show processing during save
             // Save booking with payment details
             await saveBookingToDB('Paid', response);
@@ -100,6 +116,10 @@ const Payment: React.FC = () => {
           // Failure Callback
           onFailure: (error) => {
             console.error('Payment Failed:', error);
+            
+            // Track payment failure
+            trackPaymentFailure(error.error || 'Payment failed');
+            
             setIsProcessing(false);
             
             if (error.code === 'USER_CANCELLED') {
@@ -142,6 +162,13 @@ const Payment: React.FC = () => {
       if (!response.ok) {
         throw new Error('Failed to save booking');
       }
+
+      const savedBooking = await response.json();
+      const bookingId = savedBooking?.id || savedBooking?.bookingId || 'unknown';
+
+      // Track booking completion
+      trackBookingCompleted(bookingId, Number(totalAmount) || 0);
+      fbTrackPurchase(Number(totalAmount) || 0, bookingId);
 
       // Update user stats
       if (isAuthenticated && user) {

@@ -8,6 +8,7 @@ import { KushiTeamworkCarousel } from '../components/KushiTeamworkCarousel';
 import FeaturesCarousel from '../components/FeaturesCarousel';
 import Global_API_BASE from '../services/GlobalConstants';
 import GoogleReviews from '../components/GoogleReviews';
+import SEO from '../components/SEO';
 
 interface Service {
   id: string;
@@ -588,6 +589,12 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
 
   return (
     <div>
+      <SEO 
+        title="Home Services in Bangalore - Cleaning, Plumbing, Electrical & More"
+        description="Professional home services in Bangalore. Expert cleaning, plumbing, electrical, pest control, and more. Book trusted professionals with instant quotes. Available 24/7."
+        keywords="home services bangalore, cleaning services, plumbing services, electrical services, pest control, AC repair, appliance repair, painting services"
+        url="https://kushiservices.com"
+      />
 
    {/* Rotating Offers */}
  <RotatingOffers onHeroImageUpdate={handleHeroImageUpdate} />

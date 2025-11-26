@@ -2,7 +2,6 @@
 
 const Global_API_BASE = "http://localhost:8080";  // backend api url - LOCAL TESTING
 
-
 export default Global_API_BASE;
 
 
