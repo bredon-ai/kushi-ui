@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { AuthProvider } from './contexts/AuthContext';
 import { initAnalyticsConfig } from './config/analytics.config';
+import { initRazorpayConfig } from './config/razorpay.config';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
@@ -35,9 +36,23 @@ import OrderDetailPage from './pages/OrderDetailPage';
 //import ChatbotWidget from './components/ChatbotWidget';
 
 function App() {
-  // Initialize analytics config from SSM on app load
+  // Initialize configurations from backend (AWS Secrets Manager) on app load
   useEffect(() => {
-    initAnalyticsConfig();
+    const initConfigs = async () => {
+      try {
+        // Load analytics config (Google Analytics, Facebook Pixel) from AWS SSM
+        await initAnalyticsConfig();
+        
+        // Load Razorpay config from AWS Secrets Manager
+        await initRazorpayConfig();
+        
+        console.log('✅ All configurations initialized successfully');
+      } catch (error) {
+        console.error('❌ Error initializing configurations:', error);
+      }
+    };
+    
+    initConfigs();
   }, []);
 
   return (

@@ -2,9 +2,41 @@
 // ⚠️ SECURITY: Only include PUBLIC key (KEY_ID) in frontend
 // Secret key (KEY_SECRET) should NEVER be in frontend code
 
+import Global_API_BASE from '../services/GlobalConstants';
+
+// Runtime configuration - will be loaded from backend API
+let razorpayKeyId: string = import.meta.env.VITE_RAZORPAY_KEY_ID || 'rzp_test_XXXXXXXXXXXX';
+
+/**
+ * Initialize Razorpay configuration from backend
+ * Call this on app load to fetch the Razorpay Key ID from AWS Secrets Manager
+ */
+export const initRazorpayConfig = async (): Promise<void> => {
+  try {
+    const response = await fetch(`${Global_API_BASE}/api/config/razorpay`);
+    if (response.ok) {
+      const data = await response.json();
+      razorpayKeyId = data.keyId || razorpayKeyId;
+      console.log('✅ Razorpay configuration loaded from backend');
+    } else {
+      console.warn('⚠️ Failed to load Razorpay config from backend, using fallback');
+    }
+  } catch (error) {
+    console.error('❌ Error loading Razorpay config:', error);
+    console.log('Using fallback Razorpay Key ID from environment variable');
+  }
+};
+
+/**
+ * Get the current Razorpay Key ID
+ */
+export const getRazorpayKeyId = (): string => razorpayKeyId;
+
 export const RAZORPAY_CONFIG = {
-  // ✅ PUBLIC Key - Safe to expose in frontend
-  KEY_ID: import.meta.env.VITE_RAZORPAY_KEY_ID || 'rzp_test_XXXXXXXXXXXX',
+  // ✅ PUBLIC Key - Safe to expose in frontend (loaded from backend at runtime)
+  get KEY_ID() {
+    return razorpayKeyId;
+  },
   
   // ❌ DO NOT include KEY_SECRET here - it belongs in backend only!
   // Backend handles: razorpay.key.secret=${RAZORPAY_KEY_SECRET}
