@@ -187,7 +187,7 @@ const Payment: React.FC = () => {
       // Clear cart & booking session
        localStorage.removeItem('kushiServicesCart');     // remove main cart
        localStorage.removeItem('kushiBookingSession');   // remove booking page temporary cart
-
+       localStorage.removeItem('kushiBookingFormData');
 
       setPaymentSuccess(true);
       setIsProcessing(false);

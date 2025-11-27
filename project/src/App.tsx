@@ -11,7 +11,7 @@ import WhatsAppButton from './components/WhatsAppButton';
 import GoBackButton from './components/GoBackButton';
 import AnalyticsTracker from './components/AnalyticsTracker';
 import Home from './pages/Home';
-
+import ThankYou from './pages/ThankYou';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
@@ -94,8 +94,8 @@ function App() {
               <Route path="/forgetpassword" element={<ForgetPassword />} />
               <Route path="/order-details/:bookingId" element={<OrderDetailPage />} />
               <Route path="*" element={<NotFound />} />
-
-              
+                  <Route path="/thank-you" element={<ThankYou />} />
+               
 
 
 
