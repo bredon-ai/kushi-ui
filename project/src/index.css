@@ -98,5 +98,13 @@ body > iframe[title*="Elfsight"] {
 .google-reviews-blend {
   background: linear-gradient(180deg, #ffffff 0%, #111827 100%);
 }
+html {
+font-size: 14px !important; /* change this to 12px or 10px as needed */
+}
+ 
+body {
+font-size: 1rem !important;
+zoom: 0.9; /* optional: 0.8 = smaller UI, 1.0 = normal */
+}
  
  
