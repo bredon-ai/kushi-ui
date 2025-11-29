@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Star } from "lucide-react";
+import Global_API_BASE from "../services/GlobalConstants";
  
 export default function GoogleReviews() {
   const [reviews, setReviews] = useState([]);
@@ -8,7 +9,7 @@ export default function GoogleReviews() {
  
   useEffect(() => {
     const fetchReviews = async () => {
-      const res = await fetch("http://localhost:8082/api/reviews");
+      const res = await fetch(Global_API_BASE + "/api/reviews");
       const data = await res.json();
  
       const googleReviews = data.result?.reviews || [];
