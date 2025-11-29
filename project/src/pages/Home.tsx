@@ -8,7 +8,7 @@ import { KushiTeamworkCarousel } from '../components/KushiTeamworkCarousel';
 import FeaturesCarousel from '../components/FeaturesCarousel';
 import Global_API_BASE from '../services/GlobalConstants';
 import GoogleReviews from '../components/GoogleReviews';
-import SEO from '../components/SEO';
+
 interface Service {
   id: string;
   name: string;
@@ -549,8 +549,8 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
       title: 'Packers And Movers',
       description: 'Professional packing and moving services with complete care',
       price: 'Starting ₹6,999',
-      image: 'https://kushiservices.com/wp-content/uploads/2024/07/Blue-and-White-Illustrative-House-Cleaning-Service-Flyer-210-x-140-mm-5-1024x682.png',
-      link: '/services',
+     image: 'https://bharatpackersmover.in/wp-content/uploads/2022/01/Movers-and-packers-e1465470929468-2.jpg',
+    link: '/services',
       gradient: 'from-peach-300 to-navy-700',
       services: ['Home Shifting Services', 'Office Shifting Services']
     }
@@ -562,7 +562,7 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
 
   const promotions = [
   {
-    title: 'Get 20% Off Your First Deep Clean!',
+    title: 'Get Offer on Your First Deep Clean!',
     description: 'Experience a spotless home with our premium deep cleaning service. Limited time offer for new customers.',
     cta: 'Claim Offer Now',
     image: 'https://tse4.mm.bing.net/th/id/OIP.2XIebCebLJVe7iwYKSvD4wHaFD?rs=1&pid=ImgDetMain&o=7&rm=3',
@@ -579,49 +579,49 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
   },
   {
     title: 'Marble Polishing Offer',
-    description: 'Get a luxurious shine with our marble polishing services. Flat 15% off for this season!',
+    description: 'Get a luxurious shine with our marble polishing services. Flat offer for this season!',
     cta: 'Book Now',
-    image: 'https://tse2.mm.bing.net/th/id/OIP.KUKqwjbh-0rEW1CB-ftarwHaDe?rs=1&pid=ImgDetMain&o=7&rm=3',
-    link: '/services',
-    gradient: 'from-peach-300/80 to-navy-700/80'
-  },
-  {
-    title: 'Packers & Movers Discount',
-    description: 'Shift your home or office hassle-free! Get ₹1000 off on your first move with us.',
-    cta: 'Move Now',
-    image: 'https://kushiservices.com/wp-content/uploads/2024/07/Blue-and-White-Illustrative-House-Cleaning-Service-Flyer-210-x-140-mm-5-1024x682.png',
-    link: '/services',
-    gradient: 'from-navy-700/80 to-peach-300/80'
-  },
-  {
-    title: 'Get 20% Off Your First Deep Clean!',
-    description: 'Experience a spotless home with our premium deep cleaning service. Limited time offer for new customers.',
-    cta: 'Claim Offer Now',
     image: 'https://tse4.mm.bing.net/th/id/OIP.2XIebCebLJVe7iwYKSvD4wHaFD?rs=1&pid=ImgDetMain&o=7&rm=3',
     link: '/services',
     gradient: 'from-peach-300/80 to-navy-700/80'
   },
   {
-    title: 'Annual Pest Control Package',
-    description: 'Protect your home or office year-round with our comprehensive pest control solutions. Special rates available!',
-    cta: 'Learn More',
-    image: 'https://tse4.mm.bing.net/th/id/OIP.2XIebCebLJVe7iwYKSvD4wHaFD?rs=1&pid=ImgDetMain&o=7&rm=3',
-    link: '/services',
-    gradient: 'from-navy-700/80 to-peach-300/80'
-  },
-  {
-    title: 'Marble Polishing Offer',
-    description: 'Get a luxurious shine with our marble polishing services. Flat 15% off for this season!',
-    cta: 'Book Now',
-    image: 'https://tse2.mm.bing.net/th/id/OIP.KUKqwjbh-0rEW1CB-ftarwHaDe?rs=1&pid=ImgDetMain&o=7&rm=3',
-    link: '/services',
-    gradient: 'from-peach-300/80 to-navy-700/80'
-  },
-  {
     title: 'Packers & Movers Discount',
-    description: 'Shift your home or office hassle-free! Get ₹1000 off on your first move with us.',
+    description: 'Shift your home or office hassle-free! Get offer on your first move with us.',
     cta: 'Move Now',
     image: 'https://bharatpackersmover.in/wp-content/uploads/2022/01/Movers-and-packers-e1465470929468-2.jpg',
+   link: '/services',
+    gradient: 'from-navy-700/80 to-peach-300/80'
+  },
+  {
+    title: 'Get Offer Your First Deep Clean!',
+    description: 'Experience a spotless home with our premium deep cleaning service. Limited time offer for new customers.',
+    cta: 'Claim Offer Now',
+    image: 'https://tse4.mm.bing.net/th/id/OIP.2XIebCebLJVe7iwYKSvD4wHaFD?rs=1&pid=ImgDetMain&o=7&rm=3',
+    link: '/services',
+    gradient: 'from-peach-300/80 to-navy-700/80'
+  },
+  {
+    title: 'Annual Pest Control Package',
+    description: 'Protect your home or office year-round with our comprehensive pest control solutions. Special rates available!',
+    cta: 'Learn More',
+    image: 'https://tse4.mm.bing.net/th/id/OIP.2XIebCebLJVe7iwYKSvD4wHaFD?rs=1&pid=ImgDetMain&o=7&rm=3',
+    link: '/services',
+    gradient: 'from-navy-700/80 to-peach-300/80'
+  },
+  {
+    title: 'Marble Polishing Offer',
+    description: 'Get a luxurious shine with our marble polishing services. Flat offer for this season!',
+    cta: 'Book Now',
+   image: 'https://tse4.mm.bing.net/th/id/OIP.2XIebCebLJVe7iwYKSvD4wHaFD?rs=1&pid=ImgDetMain&o=7&rm=3',
+     link: '/services',
+    gradient: 'from-peach-300/80 to-navy-700/80'
+  },
+  {
+    title: 'Packers & Movers Discount',
+    description: 'Shift your home or office hassle-free! Get offer on your first move with us.',
+    cta: 'Move Now',
+   image: 'https://bharatpackersmover.in/wp-content/uploads/2022/01/Movers-and-packers-e1465470929468-2.jpg',
     link: '/services',
     gradient: 'from-navy-700/80 to-peach-300/80'
   }
@@ -643,12 +643,7 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
 
   return (
     <div>
-    <SEO 
-        title="Home Services in Bangalore - Cleaning, Plumbing, Electrical & More"
-        description="Professional home services in Bangalore. Expert cleaning, plumbing, electrical, pest control, and more. Book trusted professionals with instant quotes. Available 24/7."
-        keywords="home services bangalore, cleaning services, plumbing services, electrical services, pest control, AC repair, appliance repair, painting services"
-        url="https://kushiservices.com"
-      />
+
    {/* Rotating Offers */}
  <RotatingOffers onHeroImageUpdate={handleHeroImageUpdate} />
 
@@ -859,7 +854,7 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
       ref={scrollRef}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
-      className="flex w-full overflow-x-auto overflow-y-visible scrollbar-hide space-x-6 py-2"
+      className="flex w-full overflow-x-auto overflow-y-visible no-scrollbar space-x-6 py-2"
       // keep scroll snapping optional:
       // snap-x snap-mandatory
     >
@@ -1029,7 +1024,7 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
     </div>
 
     {/* REVISED CONTAINER: Switched from grid to flex for horizontal scrolling */}
-    <div className="flex space-x-6 overflow-x-auto pb-4 scrollbar-hide"> {/* Added space-x-6 for gap and overflow-x-auto for scrolling */}
+    <div className="flex space-x-6 overflow-x-auto pb-4 no-scrollbar"> {/* Added space-x-6 for gap and overflow-x-auto for scrolling */}
       {promotions.map((promo, index) => (
         <Link
           key={index}
