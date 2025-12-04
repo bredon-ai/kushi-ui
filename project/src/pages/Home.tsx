@@ -549,8 +549,8 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
       title: 'Packers And Movers',
       description: 'Professional packing and moving services with complete care',
       price: 'Starting ₹6,999',
-      image: 'https://kushiservices.com/wp-content/uploads/2024/07/Blue-and-White-Illustrative-House-Cleaning-Service-Flyer-210-x-140-mm-5-1024x682.png',
-      link: '/services',
+     image: 'https://bharatpackersmover.in/wp-content/uploads/2022/01/Movers-and-packers-e1465470929468-2.jpg',
+    link: '/services',
       gradient: 'from-peach-300 to-navy-700',
       services: ['Home Shifting Services', 'Office Shifting Services']
     }
@@ -562,7 +562,7 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
 
   const promotions = [
   {
-    title: 'Get 20% Off Your First Deep Clean!',
+    title: 'Get Offer on Your First Deep Clean!',
     description: 'Experience a spotless home with our premium deep cleaning service. Limited time offer for new customers.',
     cta: 'Claim Offer Now',
     image: 'https://tse4.mm.bing.net/th/id/OIP.2XIebCebLJVe7iwYKSvD4wHaFD?rs=1&pid=ImgDetMain&o=7&rm=3',
@@ -579,49 +579,49 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
   },
   {
     title: 'Marble Polishing Offer',
-    description: 'Get a luxurious shine with our marble polishing services. Flat 15% off for this season!',
+    description: 'Get a luxurious shine with our marble polishing services. Flat offer for this season!',
     cta: 'Book Now',
-    image: 'https://tse2.mm.bing.net/th/id/OIP.KUKqwjbh-0rEW1CB-ftarwHaDe?rs=1&pid=ImgDetMain&o=7&rm=3',
-    link: '/services',
-    gradient: 'from-peach-300/80 to-navy-700/80'
-  },
-  {
-    title: 'Packers & Movers Discount',
-    description: 'Shift your home or office hassle-free! Get ₹1000 off on your first move with us.',
-    cta: 'Move Now',
-    image: 'https://kushiservices.com/wp-content/uploads/2024/07/Blue-and-White-Illustrative-House-Cleaning-Service-Flyer-210-x-140-mm-5-1024x682.png',
-    link: '/services',
-    gradient: 'from-navy-700/80 to-peach-300/80'
-  },
-  {
-    title: 'Get 20% Off Your First Deep Clean!',
-    description: 'Experience a spotless home with our premium deep cleaning service. Limited time offer for new customers.',
-    cta: 'Claim Offer Now',
     image: 'https://tse4.mm.bing.net/th/id/OIP.2XIebCebLJVe7iwYKSvD4wHaFD?rs=1&pid=ImgDetMain&o=7&rm=3',
     link: '/services',
     gradient: 'from-peach-300/80 to-navy-700/80'
   },
   {
-    title: 'Annual Pest Control Package',
-    description: 'Protect your home or office year-round with our comprehensive pest control solutions. Special rates available!',
-    cta: 'Learn More',
-    image: 'https://tse4.mm.bing.net/th/id/OIP.2XIebCebLJVe7iwYKSvD4wHaFD?rs=1&pid=ImgDetMain&o=7&rm=3',
-    link: '/services',
-    gradient: 'from-navy-700/80 to-peach-300/80'
-  },
-  {
-    title: 'Marble Polishing Offer',
-    description: 'Get a luxurious shine with our marble polishing services. Flat 15% off for this season!',
-    cta: 'Book Now',
-    image: 'https://tse2.mm.bing.net/th/id/OIP.KUKqwjbh-0rEW1CB-ftarwHaDe?rs=1&pid=ImgDetMain&o=7&rm=3',
-    link: '/services',
-    gradient: 'from-peach-300/80 to-navy-700/80'
-  },
-  {
     title: 'Packers & Movers Discount',
-    description: 'Shift your home or office hassle-free! Get ₹1000 off on your first move with us.',
+    description: 'Shift your home or office hassle-free! Get offer on your first move with us.',
     cta: 'Move Now',
     image: 'https://bharatpackersmover.in/wp-content/uploads/2022/01/Movers-and-packers-e1465470929468-2.jpg',
+   link: '/services',
+    gradient: 'from-navy-700/80 to-peach-300/80'
+  },
+  {
+    title: 'Get Offer Your First Deep Clean!',
+    description: 'Experience a spotless home with our premium deep cleaning service. Limited time offer for new customers.',
+    cta: 'Claim Offer Now',
+    image: 'https://tse4.mm.bing.net/th/id/OIP.2XIebCebLJVe7iwYKSvD4wHaFD?rs=1&pid=ImgDetMain&o=7&rm=3',
+    link: '/services',
+    gradient: 'from-peach-300/80 to-navy-700/80'
+  },
+  {
+    title: 'Annual Pest Control Package',
+    description: 'Protect your home or office year-round with our comprehensive pest control solutions. Special rates available!',
+    cta: 'Learn More',
+    image: 'https://tse4.mm.bing.net/th/id/OIP.2XIebCebLJVe7iwYKSvD4wHaFD?rs=1&pid=ImgDetMain&o=7&rm=3',
+    link: '/services',
+    gradient: 'from-navy-700/80 to-peach-300/80'
+  },
+  {
+    title: 'Marble Polishing Offer',
+    description: 'Get a luxurious shine with our marble polishing services. Flat offer for this season!',
+    cta: 'Book Now',
+   image: 'https://tse4.mm.bing.net/th/id/OIP.2XIebCebLJVe7iwYKSvD4wHaFD?rs=1&pid=ImgDetMain&o=7&rm=3',
+     link: '/services',
+    gradient: 'from-peach-300/80 to-navy-700/80'
+  },
+  {
+    title: 'Packers & Movers Discount',
+    description: 'Shift your home or office hassle-free! Get offer on your first move with us.',
+    cta: 'Move Now',
+   image: 'https://bharatpackersmover.in/wp-content/uploads/2022/01/Movers-and-packers-e1465470929468-2.jpg',
     link: '/services',
     gradient: 'from-navy-700/80 to-peach-300/80'
   }
@@ -859,7 +859,7 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
       ref={scrollRef}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
-      className="flex w-full overflow-x-auto overflow-y-visible scrollbar-hide space-x-6 py-2"
+      className="flex w-full overflow-x-auto overflow-y-visible no-scrollbar space-x-6 py-2"
       // keep scroll snapping optional:
       // snap-x snap-mandatory
     >
@@ -919,9 +919,6 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
 </section>
 
 
-
-
-
 {/* 🔹 Top Booked Services Section */}
 <section className="py-2 bg-white w-full">
   <div className="w-full max-w-[100vw] overflow-hidden">
@@ -944,69 +941,83 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
     ) : topServices.length === 0 ? (
       <p className="text-center text-navy-600">No top booked services found.</p>
     ) : (
-      <div className="flex gap-2 overflow-x-auto scroll-smooth snap-x snap-mandatory px-6 py-1 no-scrollbar w-full">
+      // 👇 REVISED CONTAINER: Ensures full-width 5-column grid on desktop
+      <div className="
+        /* Default for Mobile: Horizontal Scrolling Flex */
+        flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory px-6 py-1 no-scrollbar w-full
+
+        /* Tablet (sm): Show 3 columns, fills available width */
+        sm:grid sm:grid-cols-3 sm:grid-flow-row sm:gap-4 sm:overflow-x-hidden sm:px-4 sm:w-full sm:mx-auto 
+
+        /* Desktop (lg): Show 5 columns, fills available width */
+        lg:grid-cols-5 lg:px-6
+      ">
         {topServices.map((service, index) => (
-     <div
-  key={index}
-  onClick={() => handleClickTopService(service)}
-  className="
-    group relative flex-shrink-0 snap-start cursor-pointer
-    min-w-[250px] max-w-[250px] sm:min-w-[280px] sm:max-w-[280px]
-    transition-transform duration-500
-  "
->
-  {/* Hover Ring Wrapper */}
-  <div
-    className="
-      bg-white rounded-2xl shadow-md p-[4px]
-      
-    "
-  >
-    {/* Image Wrapper */}
-    <div className="relative h-[160px] overflow-hidden rounded-t-xl flex justify-center items-center bg-white">
-      <img
-        src={service.service_image_url || service.booking_service_image_url || '/logo.png'}
-        alt={service.booking_service_name || service.service_name}
-        className="
-          w-full h-full object-cover object-center
-          transition-transform duration-700 ease-out
-          group-hover:scale-150
-        "
-      />
+          <div
+            key={index}
+            onClick={() => handleClickTopService(service)}
+            className="
+              group relative snap-start cursor-pointer
+              
+              /* Mobile: Keep fixed width for scrolling */
+              flex-shrink-0 min-w-[250px] max-w-[250px]
 
-      {/* Arrow */}
-      <div
-        className="
-          absolute bottom-2 right-2 opacity-0 translate-y-3
-          group-hover:opacity-100 group-hover:translate-y-0
-          transition-all duration-500 z-20
-        "
-      >
-        <span className="bg-white/80 backdrop-blur-md p-2 rounded-full shadow">
-          ➜
-        </span>
-      </div>
-    </div>
+              /* Tablet/Desktop: Allow cards to take up equal column width */
+              sm:min-w-0 sm:max-w-none sm:flex-shrink
+              
+              transition-transform duration-500
+            "
+          >
+            {/* Hover Ring Wrapper */}
+            <div
+              className="
+                bg-white rounded-2xl shadow-md p-[4px]
+                
+              "
+            >
+              {/* Image Wrapper */}
+              <div className="relative h-[160px] overflow-hidden rounded-t-xl flex justify-center items-center bg-white">
+                <img
+                  src={service.service_image_url || service.booking_service_image_url || '/logo.png'}
+                  alt={service.booking_service_name || service.service_name}
+                  className="
+                    w-full h-full object-cover object-center
+                    transition-transform duration-700 ease-out
+                    group-hover:scale-150
+                  "
+                />
 
-    {/* Title */}
-    <div className="py-1 text-center bg-white rounded-b-xl">
-      <h3
-        className="
-          text-sm font-bold text-navy-700
-          group-hover:text-peach-600 group-hover:-translate-y-1
-          transition-transform duration-500
-        "
-      >
-        {service.booking_service_name || service.service_name}
-      </h3>
-    </div>
-  </div>
-</div>
+                {/* Arrow */}
+                <div
+                  className="
+                    absolute bottom-2 right-2 opacity-0 translate-y-3
+                    group-hover:opacity-100 group-hover:translate-y-0
+                    transition-all duration-500 z-20
+                  "
+                >
+                  <span className="bg-white/80 backdrop-blur-md p-2 rounded-full shadow">
+                    ➜
+                  </span>
+                </div>
+              </div>
 
-
-
+              {/* Title */}
+              <div className="py-1 text-center bg-white rounded-b-xl">
+                <h3
+                  className="
+                    text-sm font-bold text-navy-700
+                    group-hover:text-peach-600 group-hover:-translate-y-1
+                    transition-transform duration-500
+                  "
+                >
+                  {service.booking_service_name || service.service_name}
+                </h3>
+              </div>
+            </div>
+          </div>
         ))}
       </div>
+      
     )}
   </div>
 </section>
@@ -1029,7 +1040,7 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
     </div>
 
     {/* REVISED CONTAINER: Switched from grid to flex for horizontal scrolling */}
-    <div className="flex space-x-6 overflow-x-auto pb-4 scrollbar-hide"> {/* Added space-x-6 for gap and overflow-x-auto for scrolling */}
+    <div className="flex space-x-6 overflow-x-auto pb-4 no-scrollbar"> {/* Added space-x-6 for gap and overflow-x-auto for scrolling */}
       {promotions.map((promo, index) => (
         <Link
           key={index}
