@@ -494,7 +494,7 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
       title: 'Residential Cleaning Services',
       description: 'Complete home cleaning solutions with premium eco-friendly products',
       price: 'Starting ₹999',
-      image: 'https://tse4.mm.bing.net/th/id/OIP.2XIebCebLJVe7iwYKSvD4wHaFD?rs=1&pid=ImgDetMain&o=7&rm=3',
+      image: "/ResidentialCleaning.png",
       link: '/services',
       gradient: 'from-peach-300 to-navy-700',
       services: ['Full Home Deep Cleaning Services', 'Kitchen Cleaning Services', 'Bathroom Cleaning Services', 
@@ -507,7 +507,7 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
       title: 'Commercial Cleaning Services',
       description: 'Professional office and commercial space cleaning services',
       price: 'Starting ₹4,499',
-      image: 'https://rescuemytimecleaningservice.com/wp-content/uploads/2020/11/maid-service-hiring.jpg',
+      image: "/CommercialCleaningServices.png",
       link: '/services',
       gradient: 'from-navy-700 to-peach-300',
       services: ['Office Cleaning Services', 'Office Carpet Cleaning Services', 'Office Chair Cleaning Services', 'Hotel and restaurant cleaning']
@@ -517,7 +517,7 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
       title: 'Industrial Cleaning Services',
       description: 'Professional office and commercial space cleaning services',
       price: 'Starting ₹4,499',
-      image: 'https://rescuemytimecleaningservice.com/wp-content/uploads/2020/11/maid-service-hiring.jpg',
+      image: "/IndustrialCleaningServices.png",
       link: '/services',
       gradient: 'from-navy-700 to-peach-300',
       services: ['Factory Cleaning Services', 'Warehouse Cleaning Services']
@@ -527,7 +527,7 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
       title: 'Pest Control Services',
       description: 'Comprehensive pest control solutions for all residential and commercial spaces',
       price: 'Starting ₹1,899',
-      image: 'https://tse1.mm.bing.net/th/id/OIP.I6TQ2G-RhSxGDycIkxX_UAHaDt?rs=1&pid=ImgDetMain&o=7&rm=3',
+      image: "/PestControlServices.png",
       link: '/services',
       gradient: 'from-peach-300 to-navy-700',
       services: ['Cockroach Pest Control ', 'Bedbug Pest Control', 'Termite Treatment ', 'Woodborer Pest Control', 'Rodent Pest Control', 
@@ -538,7 +538,7 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
       title: 'Marble Polishing Services',
       description: 'Expert cleaning and maintenance for specialized requirements',
       price: 'Starting ₹5,999',
-      image: 'https://tse2.mm.bing.net/th/id/OIP.KUKqwjbh-0rEW1CB-ftarwHaDe?rs=1&pid=ImgDetMain&o=7&rm=3',
+      image: "/MarblePolishingServices.png",
       link: '/services',
       gradient: 'from-navy-700 to-peach-300',
       services: ['Indian Marble Polishing Services', '•	Italian Marble Polishing Services', 'Mosaic Tile Polishing Services']
@@ -549,7 +549,7 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
       title: 'Packers And Movers',
       description: 'Professional packing and moving services with complete care',
       price: 'Starting ₹6,999',
-     image: 'https://bharatpackersmover.in/wp-content/uploads/2022/01/Movers-and-packers-e1465470929468-2.jpg',
+     image: "/Packers&Movers.png",
     link: '/services',
       gradient: 'from-peach-300 to-navy-700',
       services: ['Home Shifting Services', 'Office Shifting Services']
@@ -565,7 +565,7 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
     title: 'Get Offer on Your First Deep Clean!',
     description: 'Experience a spotless home with our premium deep cleaning service. Limited time offer for new customers.',
     cta: 'Claim Offer Now',
-    image: 'https://tse4.mm.bing.net/th/id/OIP.2XIebCebLJVe7iwYKSvD4wHaFD?rs=1&pid=ImgDetMain&o=7&rm=3',
+    image: "/ResidentialCleaning.png",
     link: '/services',
     gradient: 'from-peach-300/80 to-navy-700/80'
   },
@@ -573,15 +573,14 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
     title: 'Annual Pest Control Package',
     description: 'Protect your home or office year-round with our comprehensive pest control solutions. Special rates available!',
     cta: 'Learn More',
-    image: 'https://tse4.mm.bing.net/th/id/OIP.2XIebCebLJVe7iwYKSvD4wHaFD?rs=1&pid=ImgDetMain&o=7&rm=3',
-    link: '/services',
+    image:"/CommercialCleaningServices.png",
     gradient: 'from-navy-700/80 to-peach-300/80'
   },
   {
     title: 'Marble Polishing Offer',
     description: 'Get a luxurious shine with our marble polishing services. Flat offer for this season!',
     cta: 'Book Now',
-    image: 'https://tse4.mm.bing.net/th/id/OIP.2XIebCebLJVe7iwYKSvD4wHaFD?rs=1&pid=ImgDetMain&o=7&rm=3',
+    image: "/MarblePolishingServices.png",
     link: '/services',
     gradient: 'from-peach-300/80 to-navy-700/80'
   },
@@ -589,7 +588,7 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
     title: 'Packers & Movers Discount',
     description: 'Shift your home or office hassle-free! Get offer on your first move with us.',
     cta: 'Move Now',
-    image: 'https://bharatpackersmover.in/wp-content/uploads/2022/01/Movers-and-packers-e1465470929468-2.jpg',
+    image: "/Packers&Movers.png",
    link: '/services',
     gradient: 'from-navy-700/80 to-peach-300/80'
   },
@@ -597,7 +596,7 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
     title: 'Get Offer Your First Deep Clean!',
     description: 'Experience a spotless home with our premium deep cleaning service. Limited time offer for new customers.',
     cta: 'Claim Offer Now',
-    image: 'https://tse4.mm.bing.net/th/id/OIP.2XIebCebLJVe7iwYKSvD4wHaFD?rs=1&pid=ImgDetMain&o=7&rm=3',
+    image: "/ResidentialCleaning.png",
     link: '/services',
     gradient: 'from-peach-300/80 to-navy-700/80'
   },
@@ -605,7 +604,7 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
     title: 'Annual Pest Control Package',
     description: 'Protect your home or office year-round with our comprehensive pest control solutions. Special rates available!',
     cta: 'Learn More',
-    image: 'https://tse4.mm.bing.net/th/id/OIP.2XIebCebLJVe7iwYKSvD4wHaFD?rs=1&pid=ImgDetMain&o=7&rm=3',
+    image: "/CommercialCleaningServices.png",
     link: '/services',
     gradient: 'from-navy-700/80 to-peach-300/80'
   },
@@ -613,7 +612,7 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
     title: 'Marble Polishing Offer',
     description: 'Get a luxurious shine with our marble polishing services. Flat offer for this season!',
     cta: 'Book Now',
-   image: 'https://tse4.mm.bing.net/th/id/OIP.2XIebCebLJVe7iwYKSvD4wHaFD?rs=1&pid=ImgDetMain&o=7&rm=3',
+   image:"/MarblePolishingServices.png",
      link: '/services',
     gradient: 'from-peach-300/80 to-navy-700/80'
   },
@@ -621,7 +620,7 @@ const createSlug = (text: string) => text.toLowerCase().replace(/\s/g, '-').repl
     title: 'Packers & Movers Discount',
     description: 'Shift your home or office hassle-free! Get offer on your first move with us.',
     cta: 'Move Now',
-   image: 'https://bharatpackersmover.in/wp-content/uploads/2022/01/Movers-and-packers-e1465470929468-2.jpg',
+   image: "/Packers&Movers.png",
     link: '/services',
     gradient: 'from-navy-700/80 to-peach-300/80'
   }

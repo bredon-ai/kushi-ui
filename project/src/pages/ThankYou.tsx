@@ -6,8 +6,8 @@ const ThankYou: React.FC = () => {
   const navigate = useNavigate();
  
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-      <div className="bg-white p-8 rounded-2xl shadow-xl text-center max-w-md w-full border border-gray-200">
+    <div className="min-h-[calc(80vh-4rem)] flex items-center justify-center bg-gray-50 px-4">
+      <div className="bg-white p-8 rounded-2xl shadow-xl text-center max-w-md w-full border border-gray-200 my-0">
        
         <CheckCircle className="text-green-600 mx-auto mb-4" size={60} />
  
@@ -24,9 +24,9 @@ const ThankYou: React.FC = () => {
           onClick={() => navigate("/")}
           className="w-full bg-gradient-to-r from-peach-300 to-navy-700 text-white py-2 rounded-lg font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-md"
         >
-          Go to Home
-          <ArrowRight size={18} />
+          Go to Home <ArrowRight size={18} />
         </button>
+ 
       </div>
     </div>
   );

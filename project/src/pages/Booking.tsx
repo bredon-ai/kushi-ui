@@ -226,7 +226,12 @@ const filteredMiniServices = useMemo(() => {
 }, [cartItems]);
  
  
- 
+ const [popupMessage, setPopupMessage] = useState<string>("");
+const [showPopup, setShowPopup] = useState<boolean>(false);
+
+
+
+
   const appliedPromo = location.state?.appliedPromo || '';
   const promoDiscount = location.state?.promoDiscount || 0;
  
@@ -502,58 +507,64 @@ if (!fullName) {
   };
  
  
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
- 
-    if (!validateForm()) return;
-    if (cartItems.length === 0) {
-      alert("Please add at least one service to your booking.");
-      return;
-    }
- 
-    setIsLoading(true);
-    try {
-      const bookingData = {
-        customerId: user?.id || null,
-        customerName: formData.name,
-        customerEmail: formData.email,
-        customerNumber: formData.phone,
-        addressLine1: formData.address,
-        addressLine2: '',
-        addressLine3: '',
-        city: formData.city,
-        zipCode: formData.pincode,
-        bookingAmount: subtotal,
-        totalAmount: totalAmount,
-        bookingDate: toISODateTime(formData.date, formData.time),
-        bookingServiceName:
-          formData.specificService || (cartItems.length ? cartItems.map(i => i.name).join(', ') : ''),
-        bookingStatus: "Pending",
-        bookingTime: formData.time,
-        confirmationDate: "",
-        createdBy: "Customer",
-        createdDate: "",
-        paymentMethod: "",
-        paymentStatus: "Unpaid",
-        referenceDetails: "",
-        referenceName: "",
-        remarks: formData.specialRequests,
-        updatedBy: "",
-        updatedDate: "",
-        workerAssign: "",
-        visitList: "",
-        service_id: cartItems.length ? Number(cartItems[0].id) : null,
-        user: null // Placeholder for backend data structure
-      };
- 
-      
-  
-     setIsLoading(false);
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-     
-      // Perform navigation after a short delay to allow the user to see the success message
-    
-       // Navigate to payment page with booking data
+  if (!validateForm()) return;
+
+  // 🚫 NEW RULE: Only allow bookings above 1500
+  if (totalAmount <= 1500) {
+    setPopupMessage("Minimum booking amount should be more than ₹1500 to proceed.");
+    setShowPopup(true);
+    setIsLoading(false);
+    return;
+  }
+
+  if (cartItems.length === 0) {
+    setPopupMessage("Please add at least one service to your booking.");
+    setShowPopup(true);
+    return;
+  }
+
+  setIsLoading(true);
+
+  try {
+    const bookingData = {
+      customerId: user?.id || null,
+      customerName: formData.name,
+      customerEmail: formData.email,
+      customerNumber: formData.phone,
+      addressLine1: formData.address,
+      addressLine2: '',
+      addressLine3: '',
+      city: formData.city,
+      zipCode: formData.pincode,
+      bookingAmount: subtotal,
+      totalAmount: totalAmount,
+      bookingDate: toISODateTime(formData.date, formData.time),
+      bookingServiceName:
+        formData.specificService ||
+        (cartItems.length ? cartItems.map(i => i.name).join(', ') : ''),
+      bookingStatus: "Pending",
+      bookingTime: formData.time,
+      confirmationDate: "",
+      createdBy: "Customer",
+      createdDate: "",
+      paymentMethod: "",
+      paymentStatus: "Unpaid",
+      referenceDetails: "",
+      referenceName: "",
+      remarks: formData.specialRequests,
+      updatedBy: "",
+      updatedDate: "",
+      workerAssign: "",
+      visitList: "",
+      service_id: cartItems.length ? Number(cartItems[0].id) : null,
+      user: null
+    };
+
+    setIsLoading(false);
+
     navigate("/payment", {
       state: {
         bookingData,
@@ -565,16 +576,17 @@ if (!fullName) {
         promoDiscount
       }
     });
-       
-       // Clear temp session
-   // localStorage.removeItem(BOOKING_SESSION_KEY);
 
   } catch (err) {
     console.error("Booking submission error:", err);
     setIsLoading(false);
-    alert("Failed to proceed. Please try again.");
+
+    setPopupMessage("Failed to proceed. Please try again.");
+    setShowPopup(true);
   }
 };
+
+
 
  
   const getAvailableTimeSlots = () => {
@@ -848,6 +860,22 @@ return (
             </div>
           </form>
         </div>
+
+        {showPopup && (
+  <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
+    <div className="bg-white p-5 rounded-2xl shadow-xl w-80 text-center border border-peach-300">
+      <p className="text-gray-800 font-medium mb-4">{popupMessage}</p>
+
+      <button
+        onClick={() => setShowPopup(false)}
+        className="px-4 py-2 bg-peach-500 text-white rounded-lg hover:bg-peach-600 transition"
+      >
+        OK
+      </button>
+    </div>
+  </div>
+)}
+
  
        {/* --- BOOKING SUMMARY (No “Selected Services” Heading, Matches Booking Form Height) --- */}
 <div className="flex-1 bg-white rounded-2xl shadow-md border border-peach-200 overflow-hidden flex flex-col">
